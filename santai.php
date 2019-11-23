@@ -53,8 +53,8 @@ echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOODSANTAI19"}');
         $message = fetch_value($code1,'"message":"','"');
-        if(strpos($code1, 'Dapet Voc 20k & 10k boss')){
-        echo "\n".color("yellow","♡ Message: ".$message);
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
+        echo "\n".color("yellow","□ Message: ".$message);
         goto goride;
         }else{
         echo "\n".color("red","》 Message: ".$message);
@@ -67,8 +67,8 @@ echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
         sleep(3);
         $boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOODSANTAI11"}');
         $messageboba10 = fetch_value($boba10,'"message":"','"');
-        if(strpos($boba10, 'Dapet Voc 15k & 10k boss.')){
-        echo "\n".color("yellow","♡ Message: ".$messageboba10);
+        if(strpos($boba10, 'Promo kamu sudah bisa dipakai.')){
+        echo "\n".color("yellow","□ Message: ".$messageboba10);
         goto goride;
         }else{
         echo "\n".color("red","》 Message: ".$messageboba10);
@@ -82,12 +82,12 @@ echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
         $boba19 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOODSANTAI08"}');
         $messageboba19 = fetch_value($boba19,'"message":"','"');
         if(strpos($boba19, 'Promo kamu sudah bisa dipakai.')){
-        echo "\n".color("yellow","♡ Message: ".$messageboba19);
+        echo "\n".color("yellow","□ Message: ".$messageboba19);
         goto goride;
         }else{
-        echo "\n".color("yellow","♡ Message: ".$messageboba19);
+        echo "\n".color("yellow","□ Message: ".$messageboba19);
         goride:
-        echo "\n".color("green","> redeem voc AYOCOBAGOJEK");
+        echo "\n".color("green","> redeem voc COBAINGOJEK");
         echo "\n".color("green","> sabar ya boss");
         for($a=1;$a<=3;$a++){
         echo color("green",".");
@@ -96,7 +96,7 @@ echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
         sleep(3);
         $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOODHEMAT19"}');
         $message1 = fetch_value($goride,'"message":"','"');
-        echo "\n".color("yellow","♡ Message: ".$message1);
+        echo "\n".color("yellow","□ Message: ".$message1);
         echo "\n".color("green","> redeem voc GOFOODHEMAT19");
         echo "\n".color("green","> sabar ya boss");
         for($a=1;$a<=3;$a++){
@@ -106,7 +106,7 @@ echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
         sleep(3);
         $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOODHEMAT19"}');
         $message2 = fetch_value($goride1,'"message":"','"');
-        echo "\n".color("yellow","♡ Message: ".$message2);
+        echo "\n".color("yellow","□ Message: ".$message2);
         sleep(3);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
