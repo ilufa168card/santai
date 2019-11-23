@@ -1,13 +1,13 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("green","Creator :☆ Yuki Katto ☆\n");
-echo "☆ Time    :".date('[d-m-Y] [H:i:s]')." ☆\n\n";
+echo color("nevy","Creator :□ Yuki Katto □\n");
+echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
 // function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
-        echo color("blue","¿ Masukkan nomor anda boss: ");
+        echo color("nevy","□ Masukkan nomor anda boss: ");
         // $no = trim(fgets(STDIN));
         $nohp = trim(fgets(STDIN));
         $nohp = str_replace("62","62",$nohp);
@@ -35,7 +35,7 @@ echo "☆ Time    :".date('[d-m-Y] [H:i:s]')." ☆\n\n";
         $otptoken = getStr('"otp_token":"','"',$register);
         echo color("nevy","□ otw kode verifikasi")."\n";
         otp:
-        echo color("yellow","¿ Otp: ");
+        echo color("nevy","□ Otp: ");
         $otp = trim(fgets(STDIN));
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
@@ -53,7 +53,7 @@ echo "☆ Time    :".date('[d-m-Y] [H:i:s]')." ☆\n\n";
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOODSANTAI19"}');
         $message = fetch_value($code1,'"message":"','"');
-        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
+        if(strpos($code1, 'Dapet Voc 20k & 10k boss')){
         echo "\n".color("yellow","♡ Message: ".$message);
         goto goride;
         }else{
@@ -67,7 +67,7 @@ echo "☆ Time    :".date('[d-m-Y] [H:i:s]')." ☆\n\n";
         sleep(3);
         $boba10 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOODSANTAI11"}');
         $messageboba10 = fetch_value($boba10,'"message":"','"');
-        if(strpos($boba10, 'Promo kamu sudah bisa dipakai.')){
+        if(strpos($boba10, 'Dapet Voc 15k & 10k boss.')){
         echo "\n".color("yellow","♡ Message: ".$messageboba10);
         goto goride;
         }else{
@@ -94,17 +94,17 @@ echo "☆ Time    :".date('[d-m-Y] [H:i:s]')." ☆\n\n";
         sleep(1);
         }
         sleep(3);
-        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"AYOCOBAGOJEK"}');
+        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOODHEMAT19"}');
         $message1 = fetch_value($goride,'"message":"','"');
         echo "\n".color("yellow","♡ Message: ".$message1);
-        echo "\n".color("green","> redeem voc COBAINGOJEK");
+        echo "\n".color("green","> redeem voc GOFOODHEMAT19");
         echo "\n".color("green","> sabar ya boss");
         for($a=1;$a<=3;$a++){
         echo color("green",".");
         sleep(1);
         }
         sleep(3);
-        $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAINGOJEK"}');
+        $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOODHEMAT19"}');
         $message2 = fetch_value($goride1,'"message":"','"');
         echo "\n".color("yellow","♡ Message: ".$message2);
         sleep(3);
