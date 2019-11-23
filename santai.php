@@ -7,7 +7,7 @@ echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
         ulang:
-        echo color("nevy","□ Masukkan nomor anda boss: ");
+        echo color("nevy","□ MASUKKAN NOMOR ANDA BOSS: ");
         // $no = trim(fgets(STDIN));
         $nohp = trim(fgets(STDIN));
         $nohp = str_replace("62","62",$nohp);
@@ -33,14 +33,14 @@ echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
         $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
         $otptoken = getStr('"otp_token":"','"',$register);
-        echo color("nevy","□ otw kode verifikasi")."\n";
+        echo color("nevy","□ CEK OTP DI HAPE")."\n";
         otp:
-        echo color("nevy","□ Otp: ");
+        echo color("nevy","□ MASUKKAN KODE OTP: ");
         $otp = trim(fgets(STDIN));
         $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
         $verif = request("/v5/customers/phone/verify", null, $data1);
         if(strpos($verif, '"access_token"')){
-        echo color("nevy","□ suksess daftar euy\n");
+        echo color("nevy","□ AKUN ANDA BERHASIL TERDAFTAR BOSS\n");
         $token = getStr('"access_token":"','"',$verif);
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("nevy","□ access token : ".$token."\n\n");
@@ -87,17 +87,17 @@ echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
         }else{
         echo "\n".color("yellow","□ Message: ".$messageboba19);
         goride:
-        echo "\n".color("green","> redeem voc COBAINGOJEK");
+        echo "\n".color("green","> redeem voc AYOCOBAGOJEK");
         echo "\n".color("green","> sabar ya boss");
         for($a=1;$a<=3;$a++){
         echo color("green",".");
         sleep(1);
         }
         sleep(3);
-        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOFOODHEMAT19"}');
+        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAINGOJEK"}');
         $message1 = fetch_value($goride,'"message":"','"');
         echo "\n".color("yellow","□ Message: ".$message1);
-        echo "\n".color("green","> redeem voc GOFOODHEMAT19");
+        echo "\n".color("green","> redeem voc COBAINGOJEK");
         echo "\n".color("green","> sabar ya boss");
         for($a=1;$a<=3;$a++){
         echo color("green",".");
