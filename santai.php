@@ -87,7 +87,7 @@ echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
         }else{
         echo "\n".color("yellow","□ Message: ".$messageboba19);
         goride:
-        echo "\n".color("green","> redeem voc AYOCOBAGOJEK");
+        echo "\n".color("green","> redeem voc COBAINGOJEK");
         echo "\n".color("green","> sabar ya boss");
         for($a=1;$a<=3;$a++){
         echo color("green",".");
