@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "function.php";
-echo color("nevy","Creator : □ Yuki Katto □\n");
+echo color("nevy","Creator : □ TTM Crew Anti WiuWiuW □\n");
 echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
 // function change(){
         $nama = nama();
@@ -87,14 +87,14 @@ echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
         }else{
         echo "\n".color("yellow","□ Message: ".$messageboba19);
         goride:
-        echo "\n".color("green","> redeem voc COBAINGOJEK");
+        echo "\n".color("green","> redeem voc AYOCOBAGOJEK");
         echo "\n".color("green","> sabar ya boss");
         for($a=1;$a<=3;$a++){
         echo color("green",".");
         sleep(1);
         }
         sleep(3);
-        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAINGOJEK"}');
+        $goride = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"AYOCOBAGOJEK"}');
         $message1 = fetch_value($goride,'"message":"','"');
         echo "\n".color("yellow","□ Message: ".$message1);
         echo "\n".color("green","> redeem voc COBAINGOJEK");
@@ -106,7 +106,7 @@ echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
         sleep(3);
         $goride1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAINGOJEK"}');
         $message2 = fetch_value($goride1,'"message":"','"');
-        echo "\n".color("blue","□ Message: ".$message2);
+        echo "\n".color("yellow","□ Message: ".$message2);
         sleep(3);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
@@ -117,7 +117,7 @@ echo "□ Time    :".date('[d-m-Y] [H:i:s]')." □\n\n";
         $voucher5 = getStr1('"title":"','",',$cekvoucher,"5");
         $voucher6 = getStr1('"title":"','",',$cekvoucher,"6");
         $voucher7 = getStr1('"title":"','",',$cekvoucher,"7");
-        echo "\n".color("yellow","!] Total voucher ".$total." : ");
+        echo "\n".color("blue","!] Total voucher ".$total." : ");
         echo color("nevy","1. ".$voucher1);
         echo "\n".color("nevy","                     2. ".$voucher2);
         echo "\n".color("nevy","                     3. ".$voucher3);
